@@ -11,9 +11,8 @@ int get_y(char **world)
 {
     int y = 0;
 
-    while (world[y] != 0) {
+    while (world[y] != 0)
         y++;
-    }
     return (y);
 }
 
@@ -21,9 +20,8 @@ int get_x(char **world)
 {
     int x = 0;
 
-    while (world[0][x] != 0) {
+    while (world[0][x] != 0)
         x++;
-    }
     return (x);
 }
 
@@ -61,10 +59,8 @@ int count_island(char **world)
         return (0);
     x_world = get_x(world);
     y_world = get_y(world);
-    for (int y = 0; y < y_world; y++) {
-        for (int x = 0; x < x_world; x++) {
+    for (int y = 0; y < y_world; y++)
+        for (int x = 0; x < x_world; x++)
             test(y, x, &nb_island, world);
-        }
-    }
     return (nb_island);
 }
