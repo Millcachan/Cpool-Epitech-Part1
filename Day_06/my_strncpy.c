@@ -5,13 +5,13 @@
 ** strncpy
 */
 
-char *my_strncpy(char *dest, char const *src , int n)
+char *my_strncpy(char *dest, char const *src, int n)
 {
     int i;
 
-    for (i = 0; src[i] != '\0' && n > i; i++)
+    for (i = 0; src[i] && n > i; i++)
         dest[i] = src[i];
     for (i; n > i; i++)
         dest[i] = '\0';
-    return (dest);
+    return dest;
 }
