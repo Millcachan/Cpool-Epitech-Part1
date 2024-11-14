@@ -7,9 +7,6 @@
 
 int my_print_revalpha(void)
 {
-    int a = 122;
-
-    for (int i = 0; i < 26; i++)
-        my_putchar(a--);
-    return (0);
+    for (int c = 'z'; c >= 'a'; c--)
+        my_putchar(c);
 }
