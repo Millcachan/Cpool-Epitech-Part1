@@ -5,24 +5,10 @@
 ** strstr
 */
 
-#include <stddef.h>
-
 char *my_strstr(char *str, char const *to_find)
 {
-    int len = my_strlen(to_find);
-    int test = 0;
-
-    if (len == 0)
-        return (str);
-    for (int i = 0; str[i] != '\0'; i++) {
-        test = 0;
-        for (int j = 0; str[i] == to_find[j]; j++) {
-            test++;
-            i++;
-        }
-        if (test == len)
-            return (&str[i - test]);
-        i -= test;
-    }
-    return (NULL);
+    for (int i = 0; str[i]; i++)
+        if (my_strncmp(str + i, to_find, my_strlen(to_find)) == 0)
+            return str + i;
+    return NULL;
 }
