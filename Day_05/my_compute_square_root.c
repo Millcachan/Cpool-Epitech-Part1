@@ -12,8 +12,6 @@ int my_compute_square_root(int nb)
     if ((i * i) < nb) {
         i++;
         my_compute_square_root(nb);
-    } else if ((i * i) == nb)
-        return (i);
-    else
-        return (0);
+    } else
+        return ((i * i) == nb) ? i: 0;
 }
