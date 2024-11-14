@@ -7,9 +7,6 @@
 
 int my_print_alpha(void)
 {
-    int a = 97;
-
-    for (int i = 0; i < 26; i++)
-        my_putchar(a++);
-    return (0);
+    for (int c = 'a'; c <= 'z'; c++)
+        my_putchar(c);
 }
